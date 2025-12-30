@@ -5,7 +5,6 @@ using ODataConsoleApp.Interfaces;
 
 public class PersonDetailsHandler : IPersonDetailsHandler
 {
-    private readonly IConsoleWrapper _console;
     private readonly IPersonService _personService;
     private readonly IDisplayService _displayService;
     private readonly ILogger<PersonDetailsHandler> _logger;
@@ -18,7 +17,6 @@ public class PersonDetailsHandler : IPersonDetailsHandler
         IDisplayService displayService,
         ILogger<PersonDetailsHandler> logger)
     {
-        _console = console ?? throw new ArgumentNullException(nameof(console));
         _personService = personService ?? throw new ArgumentNullException(nameof(personService));
         _displayService = displayService ?? throw new ArgumentNullException(nameof(displayService));
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));

@@ -7,13 +7,11 @@ using ODataConsoleApp.Models;
 public class AdvancedFilterHandler : IAdvancedFilterHandler
 {
     private readonly IConsoleWrapper _consoleWrapper;
-    private readonly IDisplayService _displayService;
     private readonly FilterCriteria _criteria;
 
     public AdvancedFilterHandler(IConsoleWrapper consoleWrapper, IDisplayService displayService)
     {
         _consoleWrapper = consoleWrapper ?? throw new ArgumentNullException(nameof(consoleWrapper));
-        _displayService = displayService ?? throw new ArgumentNullException(nameof(displayService));
         _criteria = new FilterCriteria();
     }
 

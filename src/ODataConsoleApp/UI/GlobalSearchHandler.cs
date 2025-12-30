@@ -6,12 +6,10 @@ using ODataConsoleApp.Models;
 public class GlobalSearchHandler : IGlobalSearchHandler
 {
     private readonly IConsoleWrapper _consoleWrapper;
-    private readonly IDisplayService _displayService;
 
     public GlobalSearchHandler(IConsoleWrapper consoleWrapper, IDisplayService displayService)
     {
         _consoleWrapper = consoleWrapper ?? throw new ArgumentNullException(nameof(consoleWrapper));
-        _displayService = displayService ?? throw new ArgumentNullException(nameof(displayService));
     }
 
     public Task<SearchCriteria?> PromptAsync()
