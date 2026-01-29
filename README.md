@@ -26,9 +26,9 @@ The project follows **Clean Architecture** principles with 4 main layers:
 ┌─────────────────────────────────────┐
 │         UI Layer (Console)          │
 │  - PeopleExplorerHandler            │
-│  - GlobalSearchHandler               │
-│  - AdvancedFilterHandler             │
-│  - PersonDetailsHandler              │
+│  - GlobalSearchHandler              │
+│  - AdvancedFilterHandler            │
+│  - PersonDetailsHandler             │
 └──────────────┬──────────────────────┘
                │
 ┌──────────────▼──────────────────────┐
